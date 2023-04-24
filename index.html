@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Infinite Love Message</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f5f5f5;
+      background-image: url('https://images1.livehindustan.com/uploadimage/library/2023/02/23/16_9/16_9_1/monthly_love_rashifal_1677135005.jpg');
+      background-repeat: repeat-y;
+      background-position: center top;
+    }
+
+    #love-message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14vw;
+      color: #e91e63;
+      text-align: center;
+      margin-top: 45vh;
+      text-shadow: 2px 2px #ddd;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="love-message"></div>
+
+  <script>
+    let loveMessage = document.getElementById('love-message');
+    let messages = ["I Love You ❤️", "You are my sunshine 😊", "You light up my world ☺️"];
+    let index = 0;
+
+    setInterval(function () {
+      loveMessage.innerHTML = messages[index];
+      index = (index + 1) % messages.length;
+    }, 1000); // update every 1 second
+  </script>
+</body>
+
+</html>
